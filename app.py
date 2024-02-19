@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 #import seaborn as sns
 
 # Plotly Express is a terse, consistent, high-level API for creating figures with Plotly.py.
-import plotly.express as px
+#import plotly.express as px
 
 # (Note: Streamlit is imported twice in the provided code, which is redundant.)
 import streamlit as st
