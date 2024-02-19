@@ -2,3 +2,4 @@ streamlit
 pyngrok
 htbuilder
 sweetviz
+seaborn
