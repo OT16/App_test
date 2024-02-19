@@ -3,3 +3,4 @@ pyngrok
 htbuilder
 sweetviz
 seaborn
+pandas
