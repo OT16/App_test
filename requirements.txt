@@ -2,7 +2,6 @@ streamlit
 pyngrok
 htbuilder
 sweetviz
-seaborn
 pandas
 numpy
 matplotlib.pyplot
