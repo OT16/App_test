@@ -4,3 +4,8 @@ htbuilder
 sweetviz
 seaborn
 pandas
+numpy
+matplotlib.pyplot
+plotly.express
+random
+PIL
