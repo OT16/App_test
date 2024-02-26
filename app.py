@@ -38,6 +38,7 @@ st.title("Chocolate Review Analysis")
 # Create a sidebar header and a separator
 st.sidebar.header("Dashboard")
 st.sidebar.markdown("---")
+app_mode = st.sidebar.selectbox('🔎 Select Page',['Introduction','Visualization','Prediction'])
 
 df = pd.read_csv("chocolate.csv")
 
