@@ -35,7 +35,7 @@ import pandas as pd
 # Load the image >>>>>>>>>>>>
 image_nyc = Image.open('newyorkcity.jpg')
 # Display the NYU logo on the Streamlit app
-st.image(image_nyc, width=100)
+st.image(image_nyc)
 
 # Set the title for the Streamlit app >>>>>>>>>>>>
 st.title("New York Data Explorer")
