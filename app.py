@@ -116,11 +116,11 @@ def main():
         max_width_str = f"max-width: 1000px;"
         st.markdown(
             f"""
-        <style>
-        .reportview-container .main .block-container{{
-            {max_width_str}
-        }}
-        </style>
+        #<style>
+        #.reportview-container .main .block-container{{
+         #   {max_width_str}
+        #}}
+        #</style>
         """,
             unsafe_allow_html=True,
         )
@@ -129,9 +129,9 @@ def main():
     # Hide the Streamlit header and footer
     def hide_header_footer():
         hide_streamlit_style = """
-                    <style>
-                    footer {visibility: hidden;}
-                    </style>
+                    #<style>
+                    #footer {visibility: hidden;}
+                    #</style>
                     """
         st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
@@ -356,11 +356,11 @@ def link(link, text, **style):
 def layout(*args):
 
     style = """
-    <style>
+    #<style>
       # MainMenu {visibility: hidden;}
-      footer {visibility: hidden;background - color: white}
-     .stApp { bottom: 80px; }
-    </style>
+     # footer {visibility: hidden;background - color: white}
+     #.stApp { bottom: 80px; }
+    #</style>
     """
     style_div = styles(
         position="fixed",
