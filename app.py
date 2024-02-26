@@ -27,7 +27,7 @@ import random
 from PIL import Image
 import streamlit as st
 import numpy as np
-#import plotly.express as px
+import plotly.express as px
 import pandas as pd
 #import plotly.io as pio
 #from neuralprophet import NeuralProphet
