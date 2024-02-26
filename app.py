@@ -32,10 +32,10 @@ import pandas as pd
 #import plotly.io as pio
 #from neuralprophet import NeuralProphet
 
-# Load the NYU logo image >>>>>>>>>>>>
-image_nyu = Image.open('nyu.png')
+# Load the image >>>>>>>>>>>>
+image_nyc = Image.open('newyorkcity.jeg')
 # Display the NYU logo on the Streamlit app
-st.image(image_nyu, width=100)
+st.image(image_nyc, width=100)
 
 # Set the title for the Streamlit app >>>>>>>>>>>>
 st.title("New York Data Explorer")
