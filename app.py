@@ -46,7 +46,7 @@ st.sidebar.markdown("---")
 app_mode = st.sidebar.selectbox('🔎 Select Page',['Introduction','Visualization','Prediction'])
  
 # read the dataset using the compression zip
-data = pd.read_csv('https://cdn-charts.streeteasy.com/sales/All/medianAskingPrice_All.zip?_ga=2.24916922.105908559.1708960519-800494817.1708960519',compression='zip')
+data = pd.read_csv('https://cdn-charts.streeteasy.com/rentals/All/medianAskingRent_All.zip?_ga=2.25329597.105908559.1708960519-800494817.1708960519',compression='zip')
 df = data.melt(id_vars=['areaName','Borough','areaType'], var_name='Attribute', value_name='Value')
 
 #The below renames df to data, and is done because we're removing #NA results
