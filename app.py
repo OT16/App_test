@@ -39,12 +39,12 @@ st.title("Chocolate Review Analysis")
 st.sidebar.header("Dashboard")
 st.sidebar.markdown("---")
 app_mode = st.sidebar.selectbox('🔎 Select Page',['Introduction','Visualization','Prediction'])
-st.sidebar.markdown("## Welcome!")
-st.sidebar.markdown("You don't have anything selected yet.\n Make a selection on the map to explore how demographic, housing, and quality of life characteristics\n compare across neighborhoods and demographic groups over the past two decades.\n Make your selection by community district*, borough, or city.\n Or, switch to the Displacement Risk Map and select a neighborhood to see the level of risk residents face \n of being unable to remain in their homes or neighborhoods.\n")
 
 df = pd.read_csv("chocolate.csv")
 
 if app_mode == "Introduction":
+  st.sidebar.markdown("## Welcome!")
+  st.sidebar.markdown("You don't have anything selected yet.\n Make a selection on the map to explore how demographic, housing, and quality of life characteristics\n compare across neighborhoods and demographic groups over the past two decades.\n Make your selection by community district*, borough, or city.\n Or, switch to the Displacement Risk Map and select a neighborhood to see the level of risk residents face \n of being unable to remain in their homes or neighborhoods.\n")
   st.markdown("## Introduction")
 
 elif app_mode == "Visualization":
