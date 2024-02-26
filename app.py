@@ -9,7 +9,7 @@ import pandas as pd
 import numpy as np
 
 # Matplotlib is a plotting library for the Python programming language and its numerical mathematics extension NumPy.
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 # Seaborn is a Python data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.
 #import seaborn as sns
