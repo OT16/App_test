@@ -1,4 +1,4 @@
-
+"""
 # Streamlit is an open-source app framework for Machine Learning and Data Science projects.
 import streamlit as st
 
@@ -22,10 +22,9 @@ import streamlit as st
 
 # Python's built-in library for generating random numbers.
 import random
-
+"""
 # PIL (Python Imaging Library) is a free library for the Python programming language that adds support for opening, manipulating, and saving many different image file formats.
 from PIL import Image
-
 
 
 import plotly.express as px
