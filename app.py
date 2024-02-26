@@ -33,7 +33,7 @@ image_nyu = Image.open('nyu.png')
 st.image(image_nyu, width=100)
 
 # Set the title for the Streamlit app >>>>>>>>>>>>
-st.title("Chocolate Review Analysis")
+st.title("New York Data Explorer")
 
 # Create a sidebar header and a separator
 st.sidebar.header("Dashboard")
