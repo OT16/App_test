@@ -33,7 +33,7 @@ import pandas as pd
 #from neuralprophet import NeuralProphet
 
 # Load the image >>>>>>>>>>>>
-image_nyc = Image.open('newyorkcity.jeg')
+image_nyc = Image.open('newyorkcity.jpg')
 # Display the NYU logo on the Streamlit app
 st.image(image_nyc, width=100)
 
