@@ -8,4 +8,4 @@ matplotlib.pyplot
 plotly.express
 random
 PIL
-Seaborn
+seaborn
