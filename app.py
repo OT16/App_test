@@ -43,6 +43,7 @@ app_mode = st.sidebar.selectbox('🔎 Select Page',['Introduction','Visualizatio
 df = pd.read_csv("chocolate.csv")
 
 if app_mode == "Introduction":
+  st.markdown("## Introduction")
 
 elif app_mode == "Visualization":
   list_variables = df.columns
@@ -71,4 +72,5 @@ elif app_mode == "Visualization":
   tab2.bar_chart(data=filtered_df, x=symbols[0], y=symbols[1], use_container_width=True)
 
 elif app_mode == "Prediction":
+  st.markdown("## Prediction")
 
