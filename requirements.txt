@@ -8,5 +8,3 @@ matplotlib.pyplot
 plotly.express
 random
 PIL
-plotly
-
