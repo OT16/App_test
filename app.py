@@ -1,4 +1,4 @@
-"""
+
 # Streamlit is an open-source app framework for Machine Learning and Data Science projects.
 import streamlit as st
 
@@ -67,6 +67,7 @@ tab1.line_chart(data=filtered_df, x=symbols[0], y=symbols[1], width=0, height=0,
 tab2.subheader("Bar Chart")
 # Display a bar chart for the selected variables
 tab2.bar_chart(data=filtered_df, x=symbols[0], y=symbols[1], use_container_width=True)
+
 """
 
 import streamlit as st
@@ -413,4 +414,4 @@ def footer2():
 
 if __name__ == "__main__":
     footer2()
-
+"""
