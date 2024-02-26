@@ -27,7 +27,7 @@ import random
 from PIL import Image
 import streamlit as st
 import numpy as np
-import plotly.express as px
+#import plotly.express as px
 import pandas as pd
 #import plotly.io as pio
 #from neuralprophet import NeuralProphet
@@ -58,14 +58,8 @@ if app_mode == "Introduction":
   st.markdown("## Introduction")
 
 elif app_mode == "Visualization":
-  
-
-  #If you want to look at another borough, change Manhattan to another borough.
-  df2020 = df.query('Borough == "Manhattan" & Attribute > "2019-12-01" & areaType == "neighborhood"')
-  
-  fig = px.line(df2020, x="Attribute", y="Value", color='areaName', symbol='areaName', line_shape='spline' ,
-          title='Selected Borough Neighborhoods, OneBd Price since 2020',width=1080, height=720)
-  fig.show()
+  symbols = df.columns()
+  st.line_chart(data=df, x=symbols[0],y=symbols[1], width=0, height=0, use_container_width=True)
 
   """
   list_variables = df.columns
