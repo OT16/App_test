@@ -61,33 +61,6 @@ elif app_mode == "Visualization":
   symbols = df.columns
   st.line_chart(data=df, x=symbols[0],y=symbols[1], width=0, height=0, use_container_width=True)
 
-  """
-  list_variables = df.columns
-  #list_variables = [" ".join(x.split("_")).title() for x in df.columns]
-  # Display a header for the Visualization section
-  st.markdown("## Visualization")
-  symbols = st.multiselect("Select two variables", list_variables, ["rating", "cocoa_percent"])
-  
-  df["cocoa_percent"] = df["cocoa_percent"].apply(lambda x : x[:-1])
-  df["cocoa_percent"] = df["cocoa_percent"].apply(lambda x : float(x))
-  rating_min, rating_max = st.sidebar.slider('Select Rating Range', min_value=int(df['rating'].min()), max_value=int(df['rating'].max()), value=(int(df['rating'].min()), int(df['rating'].max())))
-  cocoa_percent_min, cocoa_percent_max = st.sidebar.slider('Select Cocoa Percent Range', min_value=float(df['cocoa_percent'].min()), max_value=float(df['cocoa_percent'].max()), value=(float(df['cocoa_percent'].min()), float(df['cocoa_percent'].max())))
-  
-  # Filtering the dataframe based on the slider values
-  filtered_df = df[(df['rating'] >= rating_min) & (df['rating'] <= rating_max) & (df['cocoa_percent'] >= cocoa_percent_min) & (df['cocoa_percent'] <= cocoa_percent_max)]
-  
-  
-  tab1, tab2 = st.tabs(["Line Chart", "Bar Chart"])
-  
-  tab1.subheader("Line Chart")
-  # Display a line chart for the selected variables
-  tab1.line_chart(data=filtered_df, x=symbols[0], y=symbols[1], width=0, height=0, use_container_width=True)
-  
-  tab2.subheader("Bar Chart")
-  # Display a bar chart for the selected variables
-  tab2.bar_chart(data=filtered_df, x=symbols[0], y=symbols[1], use_container_width=True)
-  """
-
 elif app_mode == "Prediction":
   st.markdown("## Prediction")
 
