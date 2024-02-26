@@ -8,8 +8,6 @@ matplotlib.pyplot
 plotly.express
 random
 PIL
-
-
 altair==4.2.2
 attrs==22.2.0
 blinker==1.5
