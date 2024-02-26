@@ -27,6 +27,13 @@ import random
 from PIL import Image
 
 
+
+import plotly.express as px
+import pandas as pd
+import plotly.io as pio
+pio.renderers.default = "notebook_connected" #To get VSCode to render Plotly Visuals in an ipynb
+from neuralprophet import NeuralProphet
+
 # Load the NYU logo image >>>>>>>>>>>>
 image_nyu = Image.open('nyu.png')
 # Display the NYU logo on the Streamlit app
@@ -39,8 +46,13 @@ st.title("New York Data Explorer")
 st.sidebar.header("Dashboard")
 st.sidebar.markdown("---")
 app_mode = st.sidebar.selectbox('🔎 Select Page',['Introduction','Visualization','Prediction'])
+ 
+# read the dataset using the compression zip
+df = pd.read_csv('https://cdn-charts.streeteasy.com/sales/All/medianAskingPrice_All.zip?_ga=2.24916922.105908559.1708960519-800494817.1708960519',compression='zip')
+df = data.melt(id_vars=['areaName','Borough','areaType'], var_name='Attribute', value_name='Value')
 
-df = pd.read_csv("chocolate.csv")
+#The below renames df to data, and is done because we're removing #NA results
+data = df.dropna()
 
 if app_mode == "Introduction":
   st.sidebar.markdown("## Welcome!")
@@ -48,6 +60,16 @@ if app_mode == "Introduction":
   st.markdown("## Introduction")
 
 elif app_mode == "Visualization":
+  
+
+  #If you want to look at another borough, change Manhattan to another borough.
+  df2020 = df.query('Borough == "Manhattan" & Attribute > "2019-12-01" & areaType == "neighborhood"')
+  
+  fig = px.line(df2020, x="Attribute", y="Value", color='areaName', symbol='areaName', line_shape='spline' ,
+          title='Selected Borough Neighborhoods, OneBd Price since 2020',width=1080, height=720)
+  fig.show()
+
+  """
   list_variables = df.columns
   #list_variables = [" ".join(x.split("_")).title() for x in df.columns]
   # Display a header for the Visualization section
@@ -72,6 +94,7 @@ elif app_mode == "Visualization":
   tab2.subheader("Bar Chart")
   # Display a bar chart for the selected variables
   tab2.bar_chart(data=filtered_df, x=symbols[0], y=symbols[1], use_container_width=True)
+  """
 
 elif app_mode == "Prediction":
   st.markdown("## Prediction")
