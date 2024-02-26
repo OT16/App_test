@@ -58,7 +58,7 @@ if app_mode == "Introduction":
   st.markdown("## Introduction")
 
 elif app_mode == "Visualization":
-  symbols = df.columns()
+  symbols = df.columns
   st.line_chart(data=df, x=symbols[0],y=symbols[1], width=0, height=0, use_container_width=True)
 
   """
