@@ -30,7 +30,7 @@ from PIL import Image
 #import plotly.express as px
 import pandas as pd
 #import plotly.io as pio
-from neuralprophet import NeuralProphet
+#from neuralprophet import NeuralProphet
 
 # Load the NYU logo image >>>>>>>>>>>>
 image_nyu = Image.open('nyu.png')
