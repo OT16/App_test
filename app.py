@@ -60,7 +60,7 @@ if app_mode == "Introduction":
 elif app_mode == "Visualization":
   symbols = df.columns
   st.markdown(df.columns)
-  st.line_chart(data=df, x=symbols[1],y=symbols[-1], width=0, height=0, use_container_width=True)
+  st.bar_chart(data=df, x=symbols[1],y=symbols[-1], width=0, height=0, use_container_width=True)
 
 elif app_mode == "Prediction":
   st.markdown("## Prediction")
