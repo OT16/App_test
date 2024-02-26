@@ -9,4 +9,4 @@ plotly.express
 random
 PIL
 plotly
-pip install plotly
+
