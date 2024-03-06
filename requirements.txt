@@ -1,10 +1,5 @@
 streamlit
 pyngrok
-htbuilder
-sweetviz
 pandas
 numpy
 matplotlib.pyplot
-plotly.express
-random
-PIL
