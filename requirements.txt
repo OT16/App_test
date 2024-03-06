@@ -2,4 +2,3 @@ streamlit
 pyngrok
 pandas
 numpy
-matplotlib.pyplot
