@@ -3,3 +3,4 @@ pyngrok
 pandas
 numpy
 seaborn
+sklearn
