@@ -15,6 +15,13 @@ app_mode = st.sidebar.selectbox('Select Page',['Introduction','Visualization','P
 
 df = pd.read_csv("train.csv")
 
+def embed_google_slide(url):
+    html_code = f'<iframe src="{url}" width="1000" height="600" frameborder="0" scrolling="no"></iframe>'
+    st.write(html_code, unsafe_allow_html=True)
+
+# Paste your Google Slide URL here
+google_slide_url = "https://docs.google.com/presentation/d/1TKZXCJBw5qNSD_4Zd3D6NmoF-m-nz-8nbE2RK6ukPgI/edit?usp=sharing"
+
 
 if app_mode == "Introduction":
 
@@ -93,6 +100,9 @@ if app_mode == "Introduction":
     st.success("We have completeness ratio greater than 0.85, which is good. It shows that the vast majority of the data is available for us to use and analyze. ")
   else:
     st.success("Poor data quality due to low completeness ratio( less than 0.85).")
+
+  # Call the function with the URL
+  embed_google_slide(google_slide_url)
 
 elif app_mode == "Visualization":
   st.title("Visualization")
