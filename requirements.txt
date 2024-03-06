@@ -2,3 +2,4 @@ streamlit
 pyngrok
 pandas
 numpy
+seaborn
